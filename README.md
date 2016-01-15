@@ -1,5 +1,5 @@
 # fdswap
-shell script to redirect the output of a process to desired file
+shell script to redirect the output of a running process to desired file
 
 ## Problem Statement
 It often happens that, we run a process in the terminal, and the process starts printing out in the terminal, not letting us do our other tasks.
