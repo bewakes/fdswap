@@ -13,13 +13,13 @@ while read -a line; do
     pid=${line[0]}
     stat=${line[1]}
     cmd=${line[2]}
-    grp="grep"
+    #grp="grep"
     if [ $stat == 'T' ]; then
         # && [ "$cmd" != "$grp" ] && [ $$ -ne $pid ]; then
         #echo found
         PID=$pid
     fi
-done < <(ps ax -o pid,state,command | grep $1)
+done < <(ps ax -o pid,state,command | grep "$1")
 
 if [ $PID == '-1' ]; then
     echo ''
